@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor List</title>
+</head>
+<body>
+    <h1>Sensor List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Period</th>
+        </tr>
+        {% for sensor in sensors %}
+        <tr>
+            <td>{{ sensor.id }}</td>
+            <td>{{ sensor.name }}</td>
+            <td>{{ sensor.longi }}</td>
+            <td>{{ sensor.lati }}</td>
+            <td>{{ sensor.period }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

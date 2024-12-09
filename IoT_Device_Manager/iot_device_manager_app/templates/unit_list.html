@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit List</title>
+</head>
+<body>
+    <h1>Unit List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        {% for unit in units %}
+        <tr>
+            <td>{{ unit.id }}</td>
+            <td>{{ unit.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
