@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Sensor List</h1>
+    <a href="{% url 'sensor_create' %}">Add Sensor</a>
     <table border="1">
         <tr>
             <th>ID</th>
@@ -12,6 +13,7 @@
             <th>Longitude</th>
             <th>Latitude</th>
             <th>Period</th>
+            <th>Actions</th>
         </tr>
         {% for sensor in sensors %}
         <tr>
@@ -20,6 +22,11 @@
             <td>{{ sensor.longi }}</td>
             <td>{{ sensor.lati }}</td>
             <td>{{ sensor.period }}</td>
+            <td>
+                <a href="{% url 'sensor_detail' sensor.pk %}">View</a>
+                <a href="{% url 'sensor_update' sensor.pk %}">Edit</a>
+                <a href="{% url 'sensor_delete' sensor.pk %}">Delete</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

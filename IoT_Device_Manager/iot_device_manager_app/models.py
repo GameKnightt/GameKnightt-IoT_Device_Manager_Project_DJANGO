@@ -5,8 +5,8 @@ from django.db import models
 class Sensor(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=20)
-    longi = models.IntegerField()  # Longitude
-    lati = models.IntegerField()  # Latitude
+    longi = models.FloatField()  # Longitude
+    lati = models.FloatField()  # Latitude
     period = models.IntegerField()
 
 class Measure(models.Model):
